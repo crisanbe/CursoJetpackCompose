@@ -24,7 +24,7 @@ fun CustomTextField(
     value: String,
     placeholder: String,
     enabled: Boolean = true,
-    trilingIcon: @Composable (() -> Unit)? = null,
+    trailingIcon: @Composable (() -> Unit)? = null,
     onGloballyPositioned: ((LayoutCoordinates)-> Unit)? = null,
     onValueChange: (String) -> Unit
 ) {
@@ -53,7 +53,7 @@ fun CustomTextField(
             imeAction = ImeAction.Done,
             keyboardType = KeyboardType.Text
         ),
-        trailingIcon = trilingIcon
+        trailingIcon = trailingIcon
     )
 }
 @Preview(showBackground = true)
