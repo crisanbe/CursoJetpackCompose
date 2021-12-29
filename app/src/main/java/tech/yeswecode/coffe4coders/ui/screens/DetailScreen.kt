@@ -63,7 +63,7 @@ fun DetailScreen(navController: NavController, countryISO: CountryISO) {
                         textAlign = TextAlign.End
                         )
                         CustomButton(label = "Continuar") {
-                            navController.navigate("checkout"){
+                            navController.navigate("checkout/${countryISO.iso}"){
                                 launchSingleTop = true
                             }
 

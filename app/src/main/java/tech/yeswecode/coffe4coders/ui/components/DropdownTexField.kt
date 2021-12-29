@@ -32,16 +32,16 @@ fun DropdownTexField(
             trailingIcon = {
                 Icon(icon, contentDescription = null,
                     modifier = Modifier.clickable {
-                        expanded = !expanded
+                        expanded = !expanded//cuando de de click se expanda la lista
                     })
             },
             onGloballyPositioned = { coordinates ->
-                textfieldSize = coordinates.size.toSize()
+                textfieldSize = coordinates.size.toSize()//se le da un tamaño en el campos del Dropdown
             }
         )
         DropdownMenu(
             expanded = expanded,
-            onDismissRequest = { expanded = false },
+            onDismissRequest = { expanded = false },//cuando el evento de click sea flase se cierre nuestro menu
             modifier = Modifier.width(with(LocalDensity.current){
                 textfieldSize.width.toDp()
             })
